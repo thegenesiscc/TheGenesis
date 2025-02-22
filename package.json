@@ -9,11 +9,6 @@
         "lint": "eslint .",
         "preview": "vite preview"
     },
-    "overrides": {
-        "vite": {
-        "rollup": "npm:@rollup/wasm-node"
-        }
-    },
     "dependencies": {
         "@douyinfe/semi-ui": "^2.75.0",
         "framer-motion": "^11.11.15",
@@ -44,6 +39,11 @@
         "vite-plugin-svgr": "^4.2.0"
     },
     "optionalDependencies": {
-        "@rollup/rollup-linux-x64-gnu": "*"
+        "@rollup/rollup-linux-x64-gnu": "4.9.5"
+    },
+    "overrides": {
+        "vite": {
+            "rollup": "npm:@rollup/wasm-node"
+        }
     }
 }
