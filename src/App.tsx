@@ -151,44 +151,41 @@ function App() {
       {/* minter 部分 */}
       <div className="bg-[#2a1954] bg-opacity-70 pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-[1120px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             <div>
               <h1 className="text-4xl font-medium mb-8 ">
                 {t('mint.title')}
               </h1>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* 去中心化交易 */}
-            <FadeInWhenVisible>
-              <div className="flex flex-col">
-                <h3 className="text-lg font-normal mb-2">
-                  {t('home.features.decentralized.title')}
-                </h3>
-                <p className="text-gray-300">{t('home.features.decentralized.description')}</p>
-              </div>
-            </FadeInWhenVisible>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
+              <FadeInWhenVisible>
+                <div className="flex flex-col">
+                  <h3 className="text-lg font-normal mb-2">
+                    {t('mint.mint1.title')}
+                  </h3>
+                  <p className="text-gray-300 w-full">{t('mint.mint1.description')}</p>
+                </div>
+              </FadeInWhenVisible>
 
-            {/* 多资产支持 */}
-            <FadeInWhenVisible>
-              <div className="flex flex-col">
-                <h3 className="text-lg font-normal mb-2">
-                  {t('home.features.multiAsset.title')}
-                </h3>
-                <p className="text-gray-300">{t('home.features.multiAsset.description')}</p>
-              </div>
-            </FadeInWhenVisible>
+              <FadeInWhenVisible>
+                <div className="flex flex-col">
+                  <h3 className="text-lg font-normal mb-2">
+                    {t('mint.mint2.title')}
+                  </h3>
+                  <p className="text-gray-300 w-full">{t('mint.mint2.description')}</p>
+                </div>
+              </FadeInWhenVisible>
 
-            {/* 链上透明度 */}
-            <FadeInWhenVisible>
-              <div className="flex flex-col">
-                <h3 className="text-lg font-normal mb-2">
-                  {t('home.features.transparency.title')}
-                </h3>
-                <p className="text-gray-300">{t('home.features.transparency.description')}</p>
-              </div>
-            </FadeInWhenVisible>
+              <FadeInWhenVisible>
+                <div className="flex flex-col">
+                  <h3 className="text-lg font-normal mb-2">
+                    {t('mint.mint3.title')}
+                  </h3>
+                  <p className="text-gray-300 w-full">{t('mint.mint3.description')}</p>
+                </div>
+              </FadeInWhenVisible>
 
           </div>
-            </div>
+          </div>
             
             <div className="lg:w-auto flex justify-center">
               <img 

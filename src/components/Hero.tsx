@@ -64,7 +64,7 @@ export default function Hero() {
         {/* Powered by Monad */}
         <div className="mt-8 text-center">
           <a 
-            href="https://www.monad.xyz/" 
+            href="" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center text-gray-400 hover:text-gray-300"

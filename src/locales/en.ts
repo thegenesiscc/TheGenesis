@@ -18,7 +18,19 @@ export default {
     description: 'Our unique blind box system brings endless surprises to every player. Each blind box may contain rare items, powerful equipment, or limited-edition characters. When you open a blind box, dazzling light effects will reveal the true treasure inside. The rarity of the blind boxes ranges from common to legendary, with rarer boxes offering a higher chance of obtaining precious items.',
   },
   mint: {
-    title: 'Mining System: The Source of Wealth'
+    title: 'Mining System: The Source of Wealth',
+    mint1:{
+      title: 'The Abyss of Barren Rock',
+      description: 'A forgotten mine — The Abyss of Barren Rock. This mine is located deep within an abandoned mountain range, once a bustling mining area, but sealed off due to a mysterious volcanic eruption. Many years later, miners rediscovered it through their knowledge of the area, but the ruins are now filled with molten lava, magma monsters, and even hidden ancient mechanical devices. Only experienced miners can find the rare ores and resources buried deep within this dangerous environment.'
+    },
+    mint2:{
+      title: 'The Valley of Wind Whispers',
+      description: 'A hidden mine floating within the clouds and mist. This mine’s veins are closely connected to the power of wind elements, and the veins themselves are not underground but are hidden within cliffs surrounded by mist. The sprites have established a bond with the veins through elemental power, able to hear the whispers of the minerals in the wind, guiding them to the rare resources hidden within. It is said that these veins were gifted by ancient wind gods, possessing immense energy capable of summoning storms'
+    },
+    mint3:{
+      title: 'The Abyss of Alchemy',
+      description: 'A mysterious mine hidden beneath an ancient underground city — The Abyss of Alchemy. This mine is a vast underground labyrinth, filled with alchemical runes and the ruins of ancient laboratories. It is rumored that this was once the experimental base of a great alchemist, and the veins here hold ancient alchemical materials, possibly even the source of alchemy itself. Miners come here in search of clues to unravel the alchemical mysteries, hoping to find the power that can balance the world.'
+    }
   },
   faq: {
     title: 'FAQ',
@@ -41,7 +53,7 @@ export default {
   },
   home: {
     title: 'The Genesis: Mine Your Wealth, Embark on an Adventure in Crypto Land!',
-    description: 'In the ancient Crypto Land, all ores and resources hold immense energy. The residents of the land discovered that energy concentrates in certain special areas, forming mysterious "mining zones." To unlock the secrets of this energy, various civilizations sent their representatives—miners, elemental spirits, mechanical pets, etc., to begin their long exploration and mining journey.',
+    description: 'In the ancient Crypto Land, all ores and resources hold immense energy. The residents of the land discovered that energy concentrates in certain special areas, forming mysterious "mining zones." To unlock the secrets of this energy, various civilizations sent their representatives—miners, elemental spirits, alchemist, etc., to begin their long exploration and mining journey.',
     description1: 'As exploration deepens, players will gradually unlock more powerful mining zones and rare resources, even discovering powerful tools and artifacts left behind by ancient civilizations. These items are not just mere resources, but also carry the wisdom and energy of ancient civilizations.',
     platformInterface: 'Platform Interface',
     startNow: "Start Now",
