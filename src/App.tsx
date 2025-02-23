@@ -211,7 +211,7 @@ function App() {
               controls 
               className="shadow-2xl max-w-[500px] max-h-[600px] object-contain w-full h-auto rounded-[5px]"
             >
-              <source src="/assets/videos/welcome.mp4" type="video/mp4" />
+              <source src="/assets/videos/genesis_en.mp4" type="video/mp4" />
               您的浏览器不支持视频标签。
             </video>
             </div>
