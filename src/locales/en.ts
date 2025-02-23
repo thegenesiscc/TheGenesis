@@ -25,7 +25,7 @@ export default {
     },
     mint2:{
       title: 'The Valley of Wind Whispers',
-      description: 'A hidden mine floating within the clouds and mist. This mine’s veins are closely connected to the power of wind elements, and the veins themselves are not underground but are hidden within cliffs surrounded by mist. The sprites have established a bond with the veins through elemental power, able to hear the whispers of the minerals in the wind, guiding them to the rare resources hidden within. It is said that these veins were gifted by ancient wind gods, possessing immense energy capable of summoning storms'
+      description: 'A hidden mine floating within the clouds and mist. This mines veins are closely connected to the power of wind elements, and the veins themselves are not underground but are hidden within cliffs surrounded by mist. The sprites have established a bond with the veins through elemental power, able to hear the whispers of the minerals in the wind, guiding them to the rare resources hidden within. It is said that these veins were gifted by ancient wind gods, possessing immense energy capable of summoning storms'
     },
     mint3:{
       title: 'The Abyss of Alchemy',
@@ -85,7 +85,7 @@ export default {
       },
       transparency: {
         title: 'Alchemist Morris',
-        description: 'A mysterious alchemist who can transform ordinary ores into rare resources. His presence greatly enhances the player’s earning potential.'
+        description: 'A mysterious alchemist who can transform ordinary ores into rare resources. His presence greatly enhances the players earning potential.'
       }
     },
 
@@ -178,5 +178,25 @@ export default {
       "notUsPerson": "I am not a U.S. citizen",
       "agreeButton": "Agree and Continue"
     }
+  },
+  trade: {
+    chart: {
+      title: 'Trading Chart',
+      comingSoon: 'Chart Coming Soon'
+    },
+    buy: 'Buy',
+    sell: 'Sell',
+    amount: 'Amount',
+    price: 'Price',
+    placeBuy: 'Place Buy Order',
+    placeSell: 'Place Sell Order',
+    marketInfo: 'Market Information',
+    lastPrice: 'Last Price',
+    '24hChange': '24h Change',
+    '24hVolume': '24h Volume',
+    recentTrades: 'Recent Trades',
+    time: 'Time',
+    type: 'Type',
+    total: 'Total'
   }
 }

@@ -5,7 +5,6 @@ import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <nav className="fixed w-full z-50 bg-[#31205c] bg-opacity-40 backdrop-blur-lg">
@@ -35,16 +34,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Products</a>
-            <a href="#" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Developers</a>
-            <a href="#" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Governance</a>
-            <a href="#" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Resources</a>
-          </div>
-        </div>
-      )}
     </nav>
   );
 }

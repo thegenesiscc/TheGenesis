@@ -53,7 +53,7 @@ export default {
   },
   home: {
     title: 'The Genesis: 挖掘属于你的财富，开启Crypto大陆的冒险！',
-    description: '在古老的Crypto大陆上，所有的矿石和资源都蕴藏着巨大的能量。大陆的居民发现，能量集中到某些特殊区域，形成了神秘的“矿区”。为了解开这些能量的奥秘，各种不同的文明派出了他们的代表——矿工们、元素精灵、炼金术士等，开始了漫长的探索与挖掘。',
+    description: '在古老的Crypto大陆上，所有的矿石和资源都蕴藏着巨大的能量。大陆的居民发现，能量集中到某些特殊区域，形成了神秘的"矿区"。为了解开这些能量的奥秘，各种不同的文明派出了他们的代表——矿工们、元素精灵、炼金术士等，开始了漫长的探索与挖掘。',
     description1: '随着探索的深入，玩家会逐步解锁更强大的矿区和稀有资源，甚至发掘出古代文明遗留下的强大道具和神器。这些道具不仅是单纯的资源，更承载了古代文明的智慧与能量。',
     platformInterface: '平台界面',
     startNow: "立即开始",
@@ -178,5 +178,25 @@ export default {
       "notUsPerson": "我不是美国公民",
       "agreeButton": "同意并继续"
     }
+  },
+  trade: {
+    chart: {
+      title: '交易图表',
+      comingSoon: '图表即将上线'
+    },
+    buy: '买入',
+    sell: '卖出',
+    amount: '数量',
+    price: '价格',
+    placeBuy: '确认买入',
+    placeSell: '确认卖出',
+    marketInfo: '市场信息',
+    lastPrice: '最新价格',
+    '24hChange': '24小时涨跌',
+    '24hVolume': '24小时成交量',
+    recentTrades: '最近交易',
+    time: '时间',
+    type: '类型',
+    total: '总额'
   }
 } 
