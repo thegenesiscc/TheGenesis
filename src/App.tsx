@@ -20,7 +20,8 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-indigo-900 via-pink-900/50 to-indigo-900 text-white">
       <Navbar />
-      <TermsModal 
+      <HomePage />
+      {/* <TermsModal 
         isOpen={showTerms} 
         onClose={() => setShowTerms(false)} 
       />
@@ -29,7 +30,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/trade" element={<TradePage />} />
         </Routes>
-      </Suspense>
+      </Suspense> */}
     </div>
   );
 }
