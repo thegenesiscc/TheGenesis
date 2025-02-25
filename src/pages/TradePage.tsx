@@ -11,7 +11,7 @@ const TradePage = () => {
   return (
     <div className="min-h-screen pt-16">
        {/* Start Adventure section */}
-       <div className="bg-[url('/assets/images/chapter1.jpg')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
+       <div className="bg-[url('/assets/images/chapter.jpg')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
         <FadeInWhenVisible>
         <div className="container mx-auto px-4 max-w-[1120px]">
           <div className="max-w-4xl">
@@ -31,7 +31,7 @@ const TradePage = () => {
         </div>
         </FadeInWhenVisible>
       </div>
-      <div className="bg-[url('/assets/images/minterbg.png')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
+      <div className="bg-[url('/assets/images/km.jpg')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
        <FadeInWhenVisible>
         <div className="container mx-auto px-4 max-w-[1120px]">
           <div className="max-w-4xl">
@@ -51,7 +51,7 @@ const TradePage = () => {
         </div>
       </FadeInWhenVisible>
       </div>
-      <div className="bg-[url('/assets/images/minterbg.png')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
+      <div className="bg-[url('/assets/images/yminter.jpg')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
        <FadeInWhenVisible>
         <div className="container mx-auto px-4 max-w-[1120px]">
           <div className="max-w-4xl">
@@ -68,7 +68,7 @@ const TradePage = () => {
         </div>
       </FadeInWhenVisible>
       </div>
-      <div className="bg-[url('/assets/images/minterbg.png')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
+      <div className="bg-[url('/assets/images/es.jpg')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
        <FadeInWhenVisible>
         <div className="container mx-auto px-4 max-w-[1120px]">
           <div className="max-w-4xl">
@@ -88,7 +88,7 @@ const TradePage = () => {
         </div>
       </FadeInWhenVisible>
       </div>
-      <div className="bg-[url('/assets/images/minterbg.png')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
+      <div className="bg-[url('/assets/images/alchemistlob.jpg')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
        <FadeInWhenVisible>
         <div className="container mx-auto px-4 max-w-[1120px]">
           <div className="max-w-4xl">
@@ -105,7 +105,7 @@ const TradePage = () => {
         </div>
       </FadeInWhenVisible>
       </div>
-      <div className="bg-[url('/assets/images/minterbg.png')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
+      <div className="bg-[url('/assets/images/finals.jpg')] bg-cover bg-center bg-opacity-20 pt-12 pb-20">
        <FadeInWhenVisible>
         <div className="container mx-auto px-4 max-w-[1120px]">
           <div className="max-w-4xl">

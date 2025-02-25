@@ -21,7 +21,7 @@ export default function Navbar() {
             <div className="hidden md:flex items-center space-x-8">
               <a href="/" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.home')}</a>
               <a href="/trade" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.about')}</a>
-              <a href="/stake" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.how')}</a>
+              {/* <a href="/stake" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.how')}</a> */}
               {/* <a href="/docs" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.docs')}</a>  */}
             </div>
           </div>
