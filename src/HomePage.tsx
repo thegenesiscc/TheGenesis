@@ -56,6 +56,7 @@ const HomePage = () => {
       <div className="bg-[#2a1954] bg-opacity-70 pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-[1120px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <FadeInWhenVisible>
             <div className="lg:w-auto flex justify-center relative">
               <img 
                 src="/assets/images/mh.jpg" 
@@ -63,6 +64,8 @@ const HomePage = () => {
                 className="shadow-2xl max-w-[400px] max-h-[600px] object-contain w-full h-auto rounded-[5px]"
               />
             </div>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible>
             <div>
               <h1 className="text-4xl font-medium mb-8 ">
                 {t('mh.title')}
@@ -71,6 +74,7 @@ const HomePage = () => {
                 {t('mh.description')}
               </p>
             </div>
+            </FadeInWhenVisible>
           </div>
         </div>
       </div>

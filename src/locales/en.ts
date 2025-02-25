@@ -8,6 +8,8 @@ export default {
   },
   nav: {
     home: 'Home',
+    about: 'About',
+    how: 'Gameplay',
     trade: 'Trade',
     stake: 'Stake',
     docs: 'Documentation',
@@ -180,23 +182,41 @@ export default {
     }
   },
   trade: {
-    chart: {
-      title: 'Trading Chart',
-      comingSoon: 'Chart Coming Soon'
-    },
-    buy: 'Buy',
-    sell: 'Sell',
-    amount: 'Amount',
-    price: 'Price',
-    placeBuy: 'Place Buy Order',
-    placeSell: 'Place Sell Order',
-    marketInfo: 'Market Information',
-    lastPrice: 'Last Price',
-    '24hChange': '24h Change',
-    '24hVolume': '24h Volume',
-    recentTrades: 'Recent Trades',
-    time: 'Time',
-    type: 'Type',
-    total: 'Total'
+    story: {
+      title: 'The Genesis: The Legend of Magic Ore Veins',
+      chapter1: {
+        title: 'Chapter 1: The Mysterious Eruption',
+        description: 'In the distant Crypto Continent, this world was once peaceful and prosperous. Every region on the continent had its own unique ore veins, magical powers, and elemental forces. Historically, ore veins and elemental forces were intertwined, maintaining the balance and harmony of the continent, and there had been deep cooperation and trust between the elves and miners.',
+        description1: 'However, the peaceful days did not last long. Several years ago, a sudden volcanic eruption shattered this calm. This eruption not only altered the landscape but also caused the sealing of ore veins. All resources suddenly disappeared, and a mysterious light enveloped the continent. The once thriving mining areas became abandoned ruins. Rumors said that this eruption was caused by an unknown force, and that this force was a precursor to the magic ore veins.',
+        description2: 'As the mysterious ore veins reappeared, giant magical elements began to awaken, and a new force quietly began to grow. They are called magic ore veins, possessing limitless energy and tremendous potential. The balance of the world began to shift once again, as ancient forces and modern technology began to intertwine, awaiting the arrival of a new generation of adventurers.'
+      },
+      chapter2: {
+        title: 'Chapter 2: The Revival of Ore Veins',
+        description: 'After the revival of the magic ore veins, ancient legends of the elemental elves and alchemists gradually spread. According to ancient records, the elemental elves were the guardians of the ore veins and elemental forces, while alchemists were wise beings who controlled alchemy and magic. As the magic ore veins revived, traces of these guardians began to be discovered.',
+        description1: 'It is said that these mysterious ore veins not only contain extremely precious resources but also emit a mysterious glow, attracting countless adventurers. The ore veins hide elements, runes, magical creatures, and mechanical pets, all filled with unknown powers. They are considered the source of all wealth and secrets.',
+        description2: 'However, this is not just a simple treasure hunt. Ancient mechanical devices within the ore veins began to awaken, and mechanical monsters deep inside started to revive. Many people went to explore the mining areas, but only those who were smart and brave enough survived. They not only had to face the monster threats from deep within the veins but also compete with other adventurers for resources and treasures.'
+      },
+      chapter3: {
+        title: 'Chapter 3: The Rise of Miners',
+        description: 'On the edge of the Crypto Continent, a group of miners began their adventurous journey. Among them was a young miner, Alder, who had been chasing the legendary magic ore veins, dreaming of one day uncovering the most mysterious and powerful ore on the continent. His father had once been a famous miner but disappeared during an expedition, leaving Alder with only the legend of the magic ore veins as a clue.',
+        description1: 'Alder was not the only one chasing the ore veins. With the revival of the veins, adventurers from all over began to pour in, setting up their bases and starting to explore these mysterious mining areas. Each person had their own goal—some for wealth, some for power, and some in search of lost family and friends.'
+      },
+      chapter4: {
+        title: 'Chapter 4: Elemental Elf and Magic',
+        description: 'In the Wind Whisper Valley, a mysterious elemental elf—Faryna—had been silently guarding the balance of the world. Her fate was bound to Alder’s. When Alder first encountered the magic ore veins, his adventure began.',
+        description1: 'Faryna is not only the guardian of the ore veins but also the messenger of the wind element. She can help miners find hidden treasures and resources in the complex veins by manipulating the power of wind. Her existence is not only to protect the veins but also to ensure that these powerful elements are not misused. She is cautious with every adventurer she meets, only those with wisdom and courage can gain her help.',
+        description2: 'As the adventure progresses, Alder gradually realizes that Faryna is not just a simple magical being; she is the key to the secrets of the ore veins. Every action she takes and every guidance she provides seems to be revealing deeper secrets. And these secrets are exactly what the alchemist Morris tried to explore.'
+      },
+      chapter5: {
+        title: 'Chapter 5: The Legacy of Alchemist Morris',
+        description: 'Morris was one of the greatest alchemists, and his research combined magic and technology to create countless wonderful inventions and devices. Unfortunately, Morris disappeared during a mysterious experiment, and his laboratory vanished without a trace.',
+        description1: 'However, his legacy did not completely disappear. As a descendant of alchemists, Alder discovered alchemical runes related to Morris while exploring the ore veins. Through these runes, he unlocked some ancient secrets. Eventually, Alder realized that Morris’s disappearance might be closely related to the eruption of the magic ore veins and even to the elemental imbalance of the continent.'
+      },
+      chapter6: {
+        title: 'Chapter 6: The Final Chapter of Adventure',
+        description: 'In the final chapter of this adventure, players will face not only the threats of monsters and traps from the ore veins but also compete with other players for resources and equipment. Ultimately, players will uncover the continent’s hidden great secrets, rebalance the elemental forces, and confront those dark forces trying to exploit the magic ore veins.',
+        description1: 'The Genesis’s story is not just about adventure and mining; it is a legend of exploration, discovery, and fate. Each player will be a part of this history, choosing their own path to become the discoverer of ore veins, the controller of magic, or the creator of technology. In the end, who will be able to uncover the ultimate secrets of this world? Who will become the true legend of the Crypto Continent?'
+      }
+    }
   }
 }
