@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+
 import { useTranslation } from 'react-i18next';
 import FadeInWhenVisible from '../components/FadeInWhenVisible';
 
 const TradePage = () => {
   const { t } = useTranslation();
-  const [selectedTab, setSelectedTab] = useState('buy'); // 'buy' or 'sell'
-  const [amount, setAmount] = useState('');
-  const [price, setPrice] = useState('');
+
 
   return (
     <div className="min-h-screen pt-16">

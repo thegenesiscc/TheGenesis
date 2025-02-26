@@ -3,7 +3,8 @@ import Navbar from './components/Navbar';
 import { TermsModal } from './components/TermsModal';
 import { useTranslation } from 'react-i18next';
 import HomePage from './HomePage'; // 导入 HomePage 组件
-import TradePage from './pages/TradePage';
+import AboutPage from './pages/TradePage';
+import GamePlayPage from './pages/GamePlayPage';
 import { Routes, Route } from 'react-router-dom';
 import { Suspense ,useEffect,useState} from 'react';
 
@@ -18,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-r from-indigo-900 via-pink-900/50 to-indigo-900 text-white">
+    <div className="bg-gradient-to-r from-indigo-900 via-pink-900/50 to-indigo-900 text-white">
       <Navbar />
       {/* <HomePage /> */}
       <TermsModal 
@@ -28,7 +29,8 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/trade" element={<TradePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/gameplay" element={<GamePlayPage />} />
         </Routes>
       </Suspense>
     </div>
