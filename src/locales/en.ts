@@ -9,9 +9,10 @@ export default {
   nav: {
     home: 'Home',
     about: 'About',
-    how: 'Gameplay',
+    how: 'GamePlay',
     trade: 'Trade',
     stake: 'Stake',
+    presale: 'PreSale',
     docs: 'Documentation',
     community: 'Community',
     mywallet: 'My Wallet',
@@ -60,6 +61,7 @@ export default {
     description1: 'As exploration deepens, players will gradually unlock more powerful mining zones and rare resources, even discovering powerful tools and artifacts left behind by ancient civilizations. These items are not just mere resources, but also carry the wisdom and energy of ancient civilizations.',
     platformInterface: 'Platform Interface',
     startNow: "Start Now",
+    toPreSale: "PreSale",
     learnMore: "Learn More",
     overview: {
       title: 'Synthetic Asset Overview',
@@ -264,5 +266,16 @@ export default {
       description3: '• Free Exploration & Competition: In the game, players can freely explore veins and the world, compete or cooperate with others, and fight for resources, enriching the social and interactive experience.'
     },
     conclusion:'The Genesis provides players with an adventurous, challenging, and mysterious world, blending blockchain technology, NFTs, PVP, and PVE elements. Whether opening blind boxes, battling or cooperating with others, every decision in the game is filled with possibilities and changes. Players are not just miners but adventurers, merchants, and strategists, ultimately writing their own legend in a world full of mystery and magic!'
+  },
+  subscription: {
+    title: 'Invite Friends',
+    description: 'Share your invite link to earn 10% rewards when the invited person purchases a blind box.',
+    inviteLinkPrefix: 'Click to copy the invitation link:',
+    copySuccess: 'Invite link copied to clipboard!',
+    presaleContent: 'Users who participate in the subscription will receive an exclusive early bird membership badge, marking their unique status in TheGenesis.',
+    walletAddress: 'Wallet Address:',
+    myInviteList: 'My Invite List',
+    listdefualt:'No data yet',
+    moreinfo:'more info >',
   }
 }

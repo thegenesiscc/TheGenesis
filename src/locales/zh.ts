@@ -13,6 +13,7 @@ export default {
     how: '玩法',
     trade: '交易',
     stake: '质押',
+    presale: '认购',
     docs: '文档',
     community: '社区',
     mywallet: '我的钱包',
@@ -61,6 +62,7 @@ export default {
     description1: '随着探索的深入，玩家会逐步解锁更强大的矿区和稀有资源，甚至发掘出古代文明遗留下的强大道具和神器。这些道具不仅是单纯的资源，更承载了古代文明的智慧与能量。',
     platformInterface: '平台界面',
     startNow: "立即开始",
+    toPreSale: "参与认购",
     learnMore: "了解更多",
     overview: {
       title: '合成资产概览',
@@ -265,5 +267,16 @@ export default {
         description3: '•	自由探索与竞争：在游戏中，玩家不仅可以自由探索矿脉和世界，还可以与其他玩家竞争、合作，争夺资源，增添社交和互动体验。'
       },
       conclusion:'The Genesis 为玩家提供了一个充满冒险、挑战与奇遇的幻想世界，融合了区块链技术、NFT、PVP与PVE元素。无论是开盲盒，还是与其他玩家对战、合作，游戏中的每一次决策都充满着可能性和变化。玩家将不仅仅是一个矿工，更是一个冒险家、商人和策略家，最终在这个充满神秘与魔力的世界中，书写属于自己的传奇！'
+  },
+  subscription: {
+    title: '邀请好友',
+    description: '通过分享你的邀请链接，被邀请人购买盲盒时将你获得10%的奖励',
+    inviteLinkPrefix: '点击复制邀请链接：',
+    copySuccess: '邀请链接已复制到剪贴板！',
+    presaleContent: '参与认购的用户将获得一枚专属早鸟会员徽章，标志着他们在 TheGenesis 中的独特地位。',
+    walletAddress: '钱包地址：',
+    myInviteList: '我的邀请列表',
+    listdefualt:'暂无邀请人',
+    moreinfo:'更多详情 >',
   }
 } 

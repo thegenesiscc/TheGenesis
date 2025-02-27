@@ -32,6 +32,7 @@ export default function Navbar() {
               <a href="/" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.home')}</a>
               <a href="/about" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.about')}</a>
               <a href="/gameplay" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.how')}</a>
+              {/* <a href="/subscription" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.presale')}</a> */}
               {/* <a href="/docs" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.docs')}</a>  */}
               <div >
                 {isConnected ? (
@@ -80,6 +81,10 @@ export default function Navbar() {
                 {t('nav.how')}
               </a>
               <div className="w-full border-t border-white" />
+              {/* <a href="/subscription" className="bg-[#31205c] w-full text-lg font-normal text-white hover:opacity-80 text-center py-1">
+                {t('nav.presale')}
+              </a>
+              <div className="w-full border-t border-white" /> */}
               {/* <a href="/gameplay" className="bg-[#31205c] w-full text-lg font-normal text-white hover:opacity-80 text-center py-1">
                 {t('nav.mywallet')}
               </a> */}

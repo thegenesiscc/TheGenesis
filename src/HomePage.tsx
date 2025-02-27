@@ -18,7 +18,7 @@ const HomePage = () => {
   };
 
   const handleStartNow = () => {
-    navigate('/gameplay'); // 跳转到 GamePlayPage
+    navigate('/subscription'); // 跳转到 GamePlayPage
   };
 
   const handleLearnMore = () => {
@@ -47,7 +47,7 @@ const HomePage = () => {
                   onClick={handleStartNow}
                   className="bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80"
                 >
-                  {t('home.startNow')}
+                  {t('home.toPreSale')}
                 </button>
                 <button 
                   onClick={handleLearnMore}
