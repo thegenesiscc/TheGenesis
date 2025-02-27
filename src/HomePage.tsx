@@ -1,18 +1,28 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import FadeInWhenVisible from './components/FadeInWhenVisible'; // Import FadeInWhenVisible component
+import { useNavigate } from 'react-router-dom';
 
 import { FaTelegram, FaDiscord } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate(); // 使用 useNavigate 钩子
   // Use array to manage the expansion state of each question
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleCollapse = (index: number) => {
     // If clicking on the currently expanded item, collapse it; otherwise expand that item
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const handleStartNow = () => {
+    navigate('/gameplay'); // 跳转到 GamePlayPage
+  };
+
+  const handleLearnMore = () => {
+    navigate('/about'); // 跳转到 AboutPage
   };
 
   return (
@@ -33,10 +43,16 @@ const HomePage = () => {
               </p>
               {/* New button */}
               <div className="flex justify-center space-x-4">
-                <button className="bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80">
+                <button 
+                  onClick={handleStartNow}
+                  className="bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80"
+                >
                   {t('home.startNow')}
                 </button>
-                <button className="bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80">
+                <button 
+                  onClick={handleLearnMore}
+                  className="bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80"
+                >
                   {t('home.learnMore')}
                 </button>
               </div>

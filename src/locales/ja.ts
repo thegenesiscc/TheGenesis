@@ -14,6 +14,7 @@ export default {
     stake: 'ステーキング',
     docs: 'ドキュメント',
     community: 'コミュニティ',
+    mywallet: 'ウォレット',
   },
   mh: {
     title: 'ミステリーブラインドボックス、驚きが続く',

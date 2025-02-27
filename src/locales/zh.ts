@@ -15,6 +15,7 @@ export default {
     stake: '质押',
     docs: '文档',
     community: '社区',
+    mywallet: '我的钱包',
   },
   mh: {
     title: '神秘盲盒，惊喜连连',

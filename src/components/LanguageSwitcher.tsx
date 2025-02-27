@@ -9,9 +9,9 @@ export default function LanguageSwitcher() {
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   const languages = [
-    { code: 'zh', label: '中文' },
-    { code: 'en', label: 'English' },
-    { code: 'ja', label: '日本語' }
+    { code: 'en', label: 'EN' },
+    { code: 'ja', label: 'JA' },
+    { code: 'zh', label: 'ZH' },
   ];
 
   // 在组件加载时设置初始语言

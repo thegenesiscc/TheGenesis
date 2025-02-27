@@ -14,6 +14,7 @@ export default {
     stake: 'Stake',
     docs: 'Documentation',
     community: 'Community',
+    mywallet: 'My Wallet',
   },
   mh: {
     title: 'Mystery Blind Box, Surprises Await',
