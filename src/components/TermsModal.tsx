@@ -25,12 +25,12 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
 
   return isOpen ? (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-[#1A1B1F] rounded-2xl max-w-xl w-full p-6">
+      <div className="bg-[#7D5FA4] bg-opacity-90 rounded-2xl max-w-xl w-full p-6">
         <h2 className="text-xl font-bold mb-4 text-white">
           {t('modal.terms.title')}
         </h2>
         
-        <p className="text-gray-400 mb-4 text-sm">
+        <p className="text-gray-200 mb-4 text-sm">
           {t('modal.terms.description')}
         </p>
 
@@ -49,14 +49,14 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
                 components={{
                   terms: (
                     <a
-                      href="/terms"
+                      // href="/terms"
                       className="text-blue-400 hover:underline"
                       onClick={handleLinkClick}
                     />
                   ),
                   privacy: (
                     <a
-                      href="/privacy"
+                      // href="/privacy"
                       className="text-blue-400 hover:underline"
                       onClick={handleLinkClick}
                     />
@@ -86,7 +86,7 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
           className={`w-full mt-6 py-3 rounded-xl text-white text-base
             ${termsAccepted && notUSPerson 
               ? 'bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80' 
-              : 'bg-gray-600 cursor-not-allowed'
+              : 'bg-[#88898E] cursor-not-allowed'
             }`}
         >
           {t('modal.terms.agreeButton')}

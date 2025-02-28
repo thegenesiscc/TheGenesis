@@ -19,7 +19,7 @@ const SubscriptionPage = () => {
   };
 
   const handleMoreDetailsClick = () => {
-    navigate('/earlybrids'); // 跳转到 earlybirds 路由
+    navigate('/earlybirds'); //
   };
 
   if (!isConnected) {

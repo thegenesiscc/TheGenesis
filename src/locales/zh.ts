@@ -279,5 +279,29 @@ export default {
     listdefualt:'暂无邀请人',
     moreinfo:'更多详情 >',
     timeNotStart:'认购未开始',
-  }
+  },
+  md: {
+    activityBackgroundTitle: "活动背景",
+    activityBackgroundContent: "为了进一步激活市场并为盲盒正式售卖打下坚实的基础，TheGenesis 项目决定推出一个限量认购活动，所有参与该活动的用户将成为我们的早鸟会员。通过这个活动，我们将吸引更多用户提前加入 TheGenesis 社区，并为盲盒售卖提供早期支持。同时，早鸟会员将享有特别的优惠和专属权益，为日后的游戏参与和市场活动打下良好基础。",
+    
+    activityDetailsTitle: "活动详情",
+    qualificationAndQuantityTitle: "认购资格与数量：",
+    qualificationAndQuantity1: "本次活动的认购名额共 2000个，所有名额将按先到先得原则分配。",
+    qualificationAndQuantity2: "每个用户可参与认购 1次，每个名额为一个早鸟会员资格，机会有限，认购结束后将不再接受任何报名。",
+    qualificationAndQuantity3: "认购成功的用户将成为 TheGenesis 的专属早鸟会员，享受特权权益。",
+    
+    subscriptionFeeTitle: "认购费用：",
+    subscriptionFeeContent: "每个认购资格需要支付 0.01 BNB。用户通过支付此费用将获得一个早鸟会员资格，并在后续盲盒售卖时享受优惠。",
+    
+    benefitsAfterSubscriptionTitle: "认购成功后的福利：",
+    benefit1: "9折优惠：成功认购的用户将获得盲盒购买时 9折的专属优惠，相当于为您准备了一张优惠券，确保您在后续的盲盒购买中享受更低的价格。",
+    benefit2: "早鸟会员专属权益：除了9折优惠，早鸟会员将享有其他神秘会员权益。这些权益可能包括但不限于：提前参与未来的限时活动或预售、参与特定社区活动和专属抽奖、其他将会在未来揭晓的独家权利。",
+    benefit3: "早鸟会员徽章：每位成功认购的用户将获得一枚早鸟会员徽章。徽章象征着您的独特身份，显示您是 TheGenesis 冒险故事的先行者。徽章将在后续的活动中成为一个标志，代表您的独特地位。",
+    benefit4: "邀请返佣机制：早鸟会员不仅可以获得自身的福利，还能通过邀请其他玩家参与盲盒购买获得佣金返还。用户通过邀请链接邀请的新用户每购买一个盲盒，邀请人将获得10%的佣金返还。佣金将直接返还到邀请人的钱包中。",
+    
+    activityTimeTitle: "活动时间：",
+    activityTimeStart: "认购开始时间：[待定]，",
+    activityTimeEnd: "认购结束时间：名额有限，2000个名额售完即止，活动结束后将不再接受认购。",
+    activityContent: "用户可以通过官方活动页面进行认购，一旦支付成功，您的早鸟会员资格立即生效。",
+  },
 } 

@@ -278,5 +278,29 @@ export default {
     listdefualt:'No data yet',
     moreinfo:'more info >',
     timeNotStart:'Presale not started',
-  }
+  },
+  md: {
+    activityBackgroundTitle: "Activity Background",
+    activityBackgroundContent: "To further activate the market and lay a solid foundation for the official blind box sale, TheGenesis project has decided to launch a limited subscription event. All users who participate in this event will become our Early Bird members. Through this activity, we aim to attract more users to join TheGenesis community early and provide early support for the blind box sale. At the same time, Early Bird members will enjoy special discounts and exclusive benefits, setting a solid foundation for future game participation and market activities.",
+    
+    activityDetailsTitle: "Event Details",
+    qualificationAndQuantityTitle: "Subscription Qualifications and Quantity:",
+    qualificationAndQuantity1: "A total of 2000 subscription spots are available for this event. All spots will be allocated on a first-come, first-served basis.",
+    qualificationAndQuantity2: "Each user can participate in the subscription once, with each spot granting one Early Bird membership. The opportunity is limited, and no registrations will be accepted after the subscription ends.",
+    qualificationAndQuantity3: "Users who successfully subscribe will become exclusive Early Bird members of TheGenesis and enjoy special privileges.",
+    
+    subscriptionFeeTitle: "Subscription Fee:",
+    subscriptionFeeContent: "Each subscription spot requires a payment of 0.01 BNB. By paying this fee, users will receive one Early Bird membership and enjoy discounts during the upcoming blind box sale.",
+    
+    benefitsAfterSubscriptionTitle: "Benefits After Successful Subscription:",
+    benefit1: "10% Discount: Users who successfully subscribe will receive a 10% discount on blind box purchases, equivalent to a coupon ensuring a lower price for future blind box purchases.",
+    benefit2: "Exclusive Early Bird Member Rights: In addition to the 10% discount, Early Bird members will enjoy other mysterious benefits. These may include but are not limited to: early access to future limited-time events or presales, participation in exclusive community events and raffles, and other exclusive rights to be revealed in the future.",
+    benefit3: "Early Bird Membership Badge: Each successful subscriber will receive an Early Bird membership badge. The badge symbolizes your unique identity and marks you as a pioneer of TheGenesis adventure story. The badge will become a symbol in future events, representing your special status.",
+    benefit4: "Referral Commission System: Early Bird members not only receive benefits for themselves but can also earn commission rewards by inviting other players to participate in blind box purchases. For each blind box purchased by a new user invited via the referral link, the inviter will receive a 10% commission. The commission will be directly returned to the inviter’s wallet.",
+    
+    activityTimeTitle: "Event Time:",
+    activityTimeStart: "Subscription Start Time: [TBD],",
+    activityTimeEnd: "Subscription End Time: Limited to 2000 spots, once sold out, the event will end and no further subscriptions will be accepted.",
+    activityContent: "Users can subscribe via the official event page. Once the payment is successful, your Early Bird membership will be activated immediately.",
+  },
 }

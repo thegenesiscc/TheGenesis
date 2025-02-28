@@ -3,26 +3,33 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { useAccount } from 'wagmi'; // 从 wagmi 中引入 useAccount
-import { useLocation, useNavigate } from 'react-router-dom'; // 导入 useLocation 和 useNavigate
+import { useAccount } from 'wagmi'; // 
+import { useLocation, useNavigate } from 'react-router-dom'; // 
 
 
 export default function Navbar() {
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false); // 控制抽屉的状态
-  const [walletText, setWalletText] = useState('链接钱包'); // 默认状态
+  const [isOpen, setIsOpen] = useState(false); 
+  const [walletText, setWalletText] = useState('链接钱包'); 
   const { isConnected } = useAccount();
-  const location = useLocation(); // 获取当前路径
-  const navigate = useNavigate(); // 用于导航
+  const location = useLocation();
+  const navigate = useNavigate(); // 
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleLogoClick = () => {
+
+    if (location.pathname !== '/') {
+      navigate('/'); //
+    }
+  };
+
   const handleNavigation = (path) => {
-    // 检查当前路径是否与目标路径相同
+
     if (location.pathname !== path) {
-      navigate(path); // 跳转到目标路径
+      navigate(path); // 
     }
   };
 
@@ -31,11 +38,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-8">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0" onClick={handleLogoClick}>
               <img 
                 src="/assets/images/genesis_logo_t.png" 
                 alt="The Genesis Logo" 
-                className="h-16"
+                className="h-16 cursor-pointer"
               />
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -47,9 +54,9 @@ export default function Navbar() {
               <div>
                 {isConnected ? (
                   <a onClick={() => handleNavigation('/subscription')} className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.mywallet')}</a>
-                  // <span className="text-white">{t('nav.mywallet')}</span> // 显示连接状态和地址
+                  // <span className="text-white">{t('nav.mywallet')}</span> 
                 ) : (
-                  <span className="text-white"></span> // 显示未连接状态
+                  <span className="text-white"></span> 
                 )}
               </div>
             </div>
@@ -104,7 +111,7 @@ export default function Navbar() {
                     {t('nav.mywallet')}
                   </a>
                 ) : (
-                  <span className="text-white"></span> // 显示未连接状态
+                  <span className="text-white"></span> 
                 )}
               </div>
             </div>

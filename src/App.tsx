@@ -33,7 +33,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/gameplay" element={<GamePlayPage />} />
-            <Route path="/earlybrids" element={<MarkdownPage />} />
+            <Route path="/earlybirds" element={<MarkdownPage />} />
             <Route path="/subscription" element={<SubscriptionPage />} />
           </Routes>
         </Suspense>
