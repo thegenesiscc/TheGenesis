@@ -53,7 +53,7 @@ export default {
     answer32: '• 採掘ゾーンで採掘して取得',
     answer33: '• プレイヤー向けガイドを作成',
     answer34: '• The Genesisを友達に紹介',
-    answer35: '• HoneyWoodポッドキャストやチャンネルを始める',
+    answer35: '• The Genesisポッドキャストやチャンネルを始める',
     answer36: '• SNSで私たちをタグ付けして作品のリンクを送ってください！'
   },
   home: {

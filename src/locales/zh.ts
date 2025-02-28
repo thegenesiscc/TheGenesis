@@ -53,7 +53,7 @@ export default {
     answer32: '• 通过开采矿区获得',
     answer33: '• 为我们的玩家创建指南',
     answer34: '• 向您的朋友介绍The Genesis',
-    answer35: '• 开始 HoneyWood 播客或频道',
+    answer35: '• 开始 The Genesis 播客或频道',
     answer36: '• 请随意在社交网络上标记我们并向我们发送您的作品链接！'
   },
   home: {

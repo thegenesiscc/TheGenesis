@@ -52,7 +52,7 @@ export default {
     answer32: '• Mine in the mining zones',
     answer33: '• Create guides for our players',
     answer34: '• Introduce The Genesis to your friends',
-    answer35: '• Start a HoneyWood podcast or channel',
+    answer35: '• Start a The Genesis podcast or channel',
     answer36: '• Feel free to tag us on social media and send us your work links!'
   },
   home: {
