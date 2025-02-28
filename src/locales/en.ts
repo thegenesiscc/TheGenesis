@@ -277,5 +277,6 @@ export default {
     myInviteList: 'My Invite List',
     listdefualt:'No data yet',
     moreinfo:'more info >',
+    timeNotStart:'Presale not started',
   }
 }

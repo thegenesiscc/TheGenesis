@@ -278,5 +278,6 @@ export default {
     myInviteList: '我的邀请列表',
     listdefualt:'暂无邀请人',
     moreinfo:'更多详情 >',
+    timeNotStart:'认购未开始',
   }
 } 

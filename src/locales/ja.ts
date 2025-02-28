@@ -278,5 +278,6 @@ export default {
     myInviteList: '招待リスト',
     listdefualt:'まだデータがありません ',
     moreinfo:'詳細情報 > ',
+    timeNotStart:'未開始',
   }
 }

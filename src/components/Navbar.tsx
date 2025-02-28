@@ -36,7 +36,7 @@ export default function Navbar() {
               {/* <a href="/docs" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.docs')}</a>  */}
               <div >
                 {isConnected ? (
-                  <a href="/gameplay" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.mywallet')}</a>
+                  <a href="/subscription" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.mywallet')}</a>
                   // <span className="text-white">{t('nav.mywallet')}</span> // 显示连接状态和地址
                 ) : (
                   <span className="text-white"></span> // 显示未连接状态
@@ -90,7 +90,7 @@ export default function Navbar() {
               </a> */}
               <div className="bg-[#31205c] w-full flex items-center space-x-4">
                 {isConnected ? (
-                  <a href="/gameplay" className="bg-[#31205c] w-full text-lg font-normal text-white hover:opacity-80 text-center py-1">
+                  <a href="/subscription" className="bg-[#31205c] w-full text-lg font-normal text-white hover:opacity-80 text-center py-1">
                     {t('nav.mywallet')}
                   </a>
                 ) : (
