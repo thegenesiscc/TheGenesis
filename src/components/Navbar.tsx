@@ -5,6 +5,8 @@ import LanguageSwitcher from './LanguageSwitcher';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount } from 'wagmi'; // 
 import { useLocation, useNavigate } from 'react-router-dom'; // 
+import { FaTelegram, FaDiscord } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 
 export default function Navbar() {
@@ -62,7 +64,23 @@ export default function Navbar() {
             </div>
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
+            <a
+                href="https://x.com/TheGenesis_cc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-100 hover:text-blue-200 transition-colors"
+              >
+                <FaXTwitter className="h-5 w-5" />
+              </a>
+                <a
+                  href="https://t.me/thegenesis_group" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-100 hover:text-blue-200 transition-colors"
+                >
+                  <FaTelegram className="h-5 w-5" />
+                </a>
             <LanguageSwitcher />
             {/* <button className="text-white hover:opacity-80">
               {walletText} 

@@ -449,12 +449,6 @@ const HomePage = () => {
             >
               <FaTelegram className="h-8 w-8" />
             </a>
-            {/* <a
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-100 transition-colors"
-            >
-              <FaDiscord className="h-8 w-8" />
-            </a> */}
           </div>
         </div>
       </div>
