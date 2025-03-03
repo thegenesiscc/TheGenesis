@@ -68,6 +68,16 @@ const SubscriptionPage = () => {
 
       const inviter = await contract.getCurrentInviter(address);
       setInviterAddress(inviter);
+      console.log('referAddress', 0);
+       const urlParams = new URLSearchParams(window.location.search);
+       const referAddress = urlParams.get('refer');
+ 
+       if (referAddress && !isInviterBound) {
+         if (!inviter || inviter === '0x0000000000000000000000000000000000000000') {
+           setInviterInput(referAddress); 
+           setIsModalOpen(true);
+         }
+       }
     }
   };
 
