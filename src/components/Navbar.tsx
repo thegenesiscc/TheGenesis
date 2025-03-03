@@ -49,8 +49,8 @@ export default function Navbar() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a onClick={() => handleNavigation('/')} className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.home')}</a>
-              <a onClick={() => handleNavigation('/about')} className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.about')}</a>
               <a onClick={() => handleNavigation('/gameplay')} className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.how')}</a>
+              <a onClick={() => handleNavigation('/about')} className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.about')}</a>
               {/* <a href="/subscription" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.presale')}</a> */}
               {/* <a href="/docs" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.docs')}</a>  */}
               <div>
@@ -69,7 +69,7 @@ export default function Navbar() {
                 href="https://x.com/TheGenesis_cc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-100 hover:text-blue-200 transition-colors"
+                className="text-gray-100 hover:text-blue-800 transition-colors"
               >
                 <FaXTwitter className="h-5 w-5" />
               </a>
@@ -77,7 +77,7 @@ export default function Navbar() {
                   href="https://t.me/thegenesis_group" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-100 hover:text-blue-200 transition-colors"
+                  className="text-gray-100 hover:text-blue-800 transition-colors"
                 >
                   <FaTelegram className="h-5 w-5" />
                 </a>

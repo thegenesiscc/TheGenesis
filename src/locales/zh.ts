@@ -270,7 +270,7 @@ export default {
   },
   subscription: {
     title: '邀请好友',
-    description: '通过分享你的邀请链接，被邀请人购买盲盒时将你获得10%的奖励',
+    description: '通过分享你的邀请链接，被邀请人购买盲盒时你将获得10%的奖励',
     inviteLinkPrefix: '点击复制邀请链接：',
     copySuccess: '邀请链接已复制到剪贴板！',
     presaleContent: '参与认购的用户将获得一枚专属早鸟会员徽章，标志着他们在 TheGenesis 中的独特地位。',

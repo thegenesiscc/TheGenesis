@@ -50,6 +50,8 @@ const SubscriptionPage = () => {
           {/* 分享链接 */}
           <p className="font-medium mb-5 break-words w-full">
             {inviteLinkPrefix}
+          </p>
+          <p className="font-medium mb-5 break-words w-full">
             <span 
               onClick={copyToClipboard} 
               className="text-blue-500 cursor-pointer whitespace-normal break-all"
