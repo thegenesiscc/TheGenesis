@@ -18,7 +18,7 @@ const HomePage = () => {
   };
 
   const handleStartNow = () => {
-    navigate('/subscription'); // 跳转到 GamePlayPage
+    navigate('/mywallet'); // 跳转到 GamePlayPage
   };
 
   const handleLearnMore = () => {
