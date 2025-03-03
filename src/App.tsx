@@ -34,7 +34,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/gameplay" element={<GamePlayPage />} />
             <Route path="/earlybirds" element={<MarkdownPage />} />
-            <Route path="/subscription" element={<SubscriptionPage />} />
+            <Route path="/mywallet" element={<SubscriptionPage />} />
           </Routes>
         </Suspense>
       </div>

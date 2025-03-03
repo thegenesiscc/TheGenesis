@@ -51,11 +51,11 @@ export default function Navbar() {
               <a onClick={() => handleNavigation('/')} className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.home')}</a>
               <a onClick={() => handleNavigation('/gameplay')} className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.how')}</a>
               <a onClick={() => handleNavigation('/about')} className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.about')}</a>
-              {/* <a href="/subscription" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.presale')}</a> */}
+              {/* <a href="/mywallet" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.presale')}</a> */}
               {/* <a href="/docs" className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.docs')}</a>  */}
               <div>
                 {isConnected ? (
-                  <a onClick={() => handleNavigation('/subscription')} className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.mywallet')}</a>
+                  <a onClick={() => handleNavigation('/mywallet')} className="text-lg font-normal text-white bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 bg-clip-text text-transparent hover:opacity-80">{t('nav.mywallet')}</a>
                   // <span className="text-white">{t('nav.mywallet')}</span> 
                 ) : (
                   <span className="text-white"></span> 
@@ -116,7 +116,7 @@ export default function Navbar() {
                 {t('nav.how')}
               </a>
               <div className="w-full border-t border-white" />
-              {/* <a href="/subscription" className="bg-[#31205c] w-full text-lg font-normal text-white hover:opacity-80 text-center py-1">
+              {/* <a href="/mywallet" className="bg-[#31205c] w-full text-lg font-normal text-white hover:opacity-80 text-center py-1">
                 {t('nav.presale')}
               </a>
               <div className="w-full border-t border-white" /> */}
@@ -125,7 +125,7 @@ export default function Navbar() {
               </a> */}
               <div className="bg-[#31205c] w-full flex items-center space-x-4">
                 {isConnected ? (
-                  <a onClick={() => handleNavigation('/subscription')} className="bg-[#31205c] w-full text-lg font-normal text-white hover:opacity-80 text-center py-1">
+                  <a onClick={() => handleNavigation('/mywallet')} className="bg-[#31205c] w-full text-lg font-normal text-white hover:opacity-80 text-center py-1">
                     {t('nav.mywallet')}
                   </a>
                 ) : (

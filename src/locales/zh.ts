@@ -279,6 +279,12 @@ export default {
     listdefualt:'暂无邀请人',
     moreinfo:'更多详情 >',
     timeNotStart:'认购未开始',
+    inviter:'邀请者：',
+    BindInviter:'绑定邀请者',
+    cancel:'取消',
+    confirm:'确定', 
+    placeholder:'请输入邀请码',
+    BindInviterErr:'绑定失败，请检查邀请码或重试',
   },
   md: {
     activityBackgroundTitle: "活动背景",

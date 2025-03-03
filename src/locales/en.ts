@@ -278,6 +278,12 @@ export default {
     listdefualt:'No data yet',
     moreinfo:'more info >',
     timeNotStart:'Presale not started',
+    inviter:'Inviter:',
+    BindInviter:'Bind Inviter',
+    cancel:'Cancel',
+    confirm:'Confirm',
+    placeholder:'Enter invite code',
+    BindInviterErr:'Failed to bind inviter, please check the invite code or try again',
   },
   md: {
     activityBackgroundTitle: "Activity Background",
