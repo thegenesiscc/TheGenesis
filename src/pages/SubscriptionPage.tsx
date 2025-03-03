@@ -4,6 +4,7 @@ import { useAccount } from 'wagmi';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { ethers } from 'ethers'; // 引入 ethers
+import { BigNumber } from 'ethers'; // 添加 BigNumber 导入
 
 import { useMemo } from 'react'
 import { type Config, useConnectorClient } from 'wagmi'
@@ -33,6 +34,7 @@ const SubscriptionPage = () => {
   const [isInviterBound, setIsInviterBound] = useState(false); // 新增状态管理
   const [errorMessage, setErrorMessage] = useState(''); // 新增状态管理
   const [inviterList, setInviterList] = useState<string[]>([]); // 新增状态管理
+  const [isEarlyBird, setIsEarlyBird] = useState<boolean>(false); // 新增状态管理
 
   const inviteLinkPrefix = t('subscription.inviteLinkPrefix');
   const inviteErr = t('subscription.BindInviterErr');
@@ -94,9 +96,23 @@ const SubscriptionPage = () => {
     }
   };
 
+  const checkEarlyBirdStatus = async () => {
+    if (isConnected && address && signer) {
+      const contract = new ethers.Contract(
+        '0x7374b6bb72d09a7bf3d9cac249552d5005a5f0c1',
+        ['function isRegistered(address _address) external view returns (bool)'],
+        signer
+      );
+
+      const registered = await contract.isRegistered(address);
+      setIsEarlyBird(registered); // 更新状态
+    }
+  };
+
   useEffect(() => {
     fetchInviterAddress();
     fetchInviterList(); // 新增调用
+    checkEarlyBirdStatus(); // 新增调用
   }, [isConnected, address, signer]);
 
   const handleConfirm = async () => {
@@ -126,6 +142,33 @@ const SubscriptionPage = () => {
     }
   };
 
+  const handleRegister = async () => {
+    try {
+      if (!signer) {
+        throw new Error("Provider is not available");
+      }
+
+      const contract = new ethers.Contract(
+        '0x7374b6bb72d09a7bf3d9cac249552d5005a5f0c1',
+        ['function register() external payable'],
+        signer
+      );
+
+      console.log(contract);
+
+      const tx = await contract.register({
+        value: ethers.parseEther("0.01") // 支付 0.01 BNB
+      });
+      await tx.wait(); // 等待交易确认
+
+      // 成功调用后，重新查询 earlyBirds 状态
+      checkEarlyBirdStatus(); // 更新页面
+    } catch (error) {
+      console.error('Error registering as early bird:', error);
+      setErrorMessage(t('subscription.registerError')); // 设置错误消息
+    }
+  };
+
   if (!isConnected) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -142,7 +185,11 @@ const SubscriptionPage = () => {
           <div className="flex items-start mb-4 flex-wrap">
             {/* Avatar section */}
             <div className="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center mr-4 overflow-hidden">
-              <img src="/assets/images/genesis_r.jpg" className="w-full h-full object-cover" />
+              <img 
+                src={isEarlyBird ? "/assets/images/earlybrids.jpg" : "/assets/images/genesis_r.jpg"} 
+                className="w-full h-full object-cover" 
+              />
+              {/* earlybrids.jpg */}
             </div>
             {/* Wallet address */}
             <div className="flex flex-col w-full">
@@ -169,15 +216,14 @@ const SubscriptionPage = () => {
 
           {/* Buttons */}
           <div className="flex space-x-4 mb-4">
-            <button className="bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80">
-              {t('subscription.timeNotStart')}
-            </button>
-            {/* <button className="bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80">
-              Participate in subscription
-            </button> */}
-            {/* <button className="bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80">
-              Subscribed
-            </button> */}
+            {!isEarlyBird && ( // 根据 isEarlyBird 状态决定按钮是否显示
+              <button 
+                className="bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80"
+                onClick={handleRegister} // 点击按钮时调用 handleRegister
+              >
+                {t('subscription.timeStart')}
+              </button>
+            )}
           </div>
 
           {/* Description text */}

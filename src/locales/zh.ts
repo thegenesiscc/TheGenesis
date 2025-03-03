@@ -279,6 +279,7 @@ export default {
     listdefualt:'暂无邀请人',
     moreinfo:'更多详情 >',
     timeNotStart:'认购未开始',
+    timeStart:'开始认购',
     inviter:'邀请者：',
     BindInviter:'绑定邀请者',
     cancel:'取消',

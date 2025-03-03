@@ -278,6 +278,7 @@ export default {
     listdefualt:'No data yet',
     moreinfo:'more info >',
     timeNotStart:'Presale not started',
+    timeStart:'Start Presale',
     inviter:'Inviter:',
     BindInviter:'Bind Inviter',
     cancel:'Cancel',

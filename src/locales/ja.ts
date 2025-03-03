@@ -279,6 +279,7 @@ export default {
     listdefualt:'まだデータがありません ',
     moreinfo:'詳細情報 > ',
     timeNotStart:'未開始',  
+    timeStart:'開始認購',
     inviter:'招待者：',
     BindInviter:'招待者を綁定',
     cancel:'キャンセル',
