@@ -27,6 +27,28 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen">
+      <div className="bg-[#9422d6] bg-opacity-30 pt-24 pb-4">
+        <div className="container mx-auto px-4 max-w-[1120px]">
+          <div className="flex items-start space-x-4">
+              <img 
+                src="/assets/images/earlybrids.jpg" 
+                alt="Platform Interface" 
+                className="shadow-2xl max-w-[80px] max-h-[80px] object-contain w-full h-auto rounded-[5px]"
+              />
+              <div className="flex flex-col">
+                <h3 className="text-lg font-normal mb-2 text-left pr-4">
+                  {t('home.earlybirdstitle')}
+                </h3>
+                <button 
+                  onClick={handleStartNow}
+                  className="max-w-[120px] bg-gradient-to-r from-purple-400 via-pink-300 to-orange-200 text-white px-4 py-2 rounded hover:opacity-80"
+                >
+                  {t('home.toPreSale')}
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
       {/* Upper section - Light purple background */}
       <div className="bg-opacity-70 pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-[1120px]">

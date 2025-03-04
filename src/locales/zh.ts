@@ -64,6 +64,7 @@ export default {
     startNow: "立即开始",
     toPreSale: "参与认购",
     learnMore: "了解更多",
+    earlybirdstitle: "🚀 TheGenesis 早鸟会员资格现已生效！ 🚀早期的探索者总能获得最好的回报，象征您的先驱身份，隐藏的福利尚未揭晓。限 2,000 个名额，先到先得。",
     overview: {
       title: '合成资产概览',
       what: {
@@ -279,13 +280,14 @@ export default {
     listdefualt:'暂无邀请人',
     moreinfo:'更多详情 >',
     timeNotStart:'认购未开始',
-    timeStart:'开始认购',
+    timeStart:'开始认购 0.01BNB',
     inviter:'邀请者：',
     BindInviter:'绑定邀请者',
     cancel:'取消',
     confirm:'确定', 
     placeholder:'请输入邀请码',
     BindInviterErr:'绑定失败，请检查邀请码或重试',
+    insufficientBalance:'余额不足',
   },
   md: {
     activityBackgroundTitle: "活动背景",

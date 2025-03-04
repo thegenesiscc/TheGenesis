@@ -64,6 +64,7 @@ export default {
     startNow: "今すぐ開始",
     toPreSale: "先行販売",
     learnMore: "続きを読む",
+    earlybirdstitle: "🚀 TheGenesis 早鳥会員資格は今すぐ利用可能です！ 🚀 早期の探索者は常に最高のリターンを得ることができます。象徴的な先駆者身分、隠された特典はまだ明らかになっていません。2,000 名の枠があります。FCFS。",
     overview: {
       title: '合成資産の概要',
       what: {
@@ -279,13 +280,14 @@ export default {
     listdefualt:'まだデータがありません ',
     moreinfo:'詳細情報 > ',
     timeNotStart:'未開始',  
-    timeStart:'開始認購',
+    timeStart:'開始認購 0.01BNB',
     inviter:'招待者：',
     BindInviter:'招待者を綁定',
     cancel:'キャンセル',
     confirm:'確定',
     placeholder:'招待コードを入力してください',
     BindInviterErr:'招待コードを確認するか、もう一度お試しください',
+    insufficientBalance:'残高不足',
   },
   md: {
     activityBackgroundTitle: "活動背景",

@@ -63,6 +63,7 @@ export default {
     startNow: "Start Now",
     toPreSale: "PreSale",
     learnMore: "Learn More",
+    earlybirdstitle: "🚀 TheGenesis Early Bird Membership is now available! 🚀 Early explorers always get the best returns.Limited to 2,000 spots. Once they’re gone, they’re gone forever.FCFS.",
     overview: {
       title: 'Synthetic Asset Overview',
       what: {
@@ -278,13 +279,14 @@ export default {
     listdefualt:'No data yet',
     moreinfo:'more info >',
     timeNotStart:'Presale not started',
-    timeStart:'Start Presale',
+    timeStart:'Start Presale 0.01BNB',
     inviter:'Inviter:',
     BindInviter:'Bind Inviter',
     cancel:'Cancel',
     confirm:'Confirm',
     placeholder:'Enter invite code',
     BindInviterErr:'Failed to bind inviter, please check the invite code or try again',
+    insufficientBalance:'Insufficient balance',
   },
   md: {
     activityBackgroundTitle: "Activity Background",

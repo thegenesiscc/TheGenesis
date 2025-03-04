@@ -148,6 +148,21 @@ const SubscriptionPage = () => {
         throw new Error("Provider is not available");
       }
 
+      // 获取用户的地址
+      const userAddress = await signer.getAddress();
+      const provider = signer.provider;
+      
+      // 检查用户的余额
+      // const balance = await signer.getProvider().getBalance(); // 直接调用 getBalance
+      const balance = await provider.getBalance(userAddress);
+      console.log('balance', balance);
+      const requiredAmount = ethers.parseEther("0.01"); // 需要的金额 0.01 BNB
+      console.log('requiredAmount', requiredAmount);
+      if (balance<(requiredAmount)) {
+        alert(t('subscription.insufficientBalance')); // 弹出提示
+        return; // 退出函数
+      }
+
       const contract = new ethers.Contract(
         '0x7374b6bb72d09a7bf3d9cac249552d5005a5f0c1',
         ['function register() external payable'],
@@ -157,7 +172,7 @@ const SubscriptionPage = () => {
       console.log(contract);
 
       const tx = await contract.register({
-        value: ethers.parseEther("0.01") // 支付 0.01 BNB
+        value: requiredAmount // 支付 0.01 BNB
       });
       await tx.wait(); // 等待交易确认
 
