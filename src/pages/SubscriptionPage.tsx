@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { ethers } from 'ethers'; // 引入 ethers
 import { BigNumber } from 'ethers'; // 添加 BigNumber 导入
+import CryptoJS from 'crypto-js'; // 引入 crypto-js
 
 import { useMemo } from 'react'
 import { type Config, useConnectorClient } from 'wagmi'
@@ -23,6 +24,8 @@ export function useEthersSigner({ chainId }: { chainId?: number } = {}) {
   return useMemo(() => (client ? clientToSigner(client) : undefined), [client])
 }
 
+const SALT = 'ethereum_address_salt'; // 固定盐值
+
 const SubscriptionPage = () => {
   const { t } = useTranslation();
   const { isConnected, address } = useAccount();
@@ -38,10 +41,13 @@ const SubscriptionPage = () => {
 
   const inviteLinkPrefix = t('subscription.inviteLinkPrefix');
   const inviteErr = t('subscription.BindInviterErr');
-  const inviteLink = `https://thegenesis.cc/mywallet?refer=${address}`;
+  // const inviteLink = `https://thegenesis.cc/mywallet?refer=${address}`;
+  const encryptedAddress = CryptoJS.AES.encrypt(address, SALT).toString(); // 加密地址
+  // const newInviteLink = `https://thegenesis.cc/mywallet?refer=${encryptedAddress}`; // 使用加密后的地址生成
+  const newInviteLink = `https://thegenesis.cc/mywallet?refer=${encodeURIComponent(encryptedAddress)}`; // 使用加密后的地址生成新的邀请链接新的邀请链接
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(inviteLink).then(() => {
+    navigator.clipboard.writeText(newInviteLink).then(() => {
       alert(t('subscription.copySuccess'));
     });
   };
@@ -70,15 +76,18 @@ const SubscriptionPage = () => {
 
       const inviter = await contract.getCurrentInviter(address);
       setInviterAddress(inviter);
-      console.log('referAddress', 0);
        const urlParams = new URLSearchParams(window.location.search);
-       const referAddress = urlParams.get('refer');
- 
-       if (referAddress && !isInviterBound) {
-         if (!inviter || inviter === '0x0000000000000000000000000000000000000000') {
+      //  const referAddress = urlParams.get('refer');
+      const referAddressParam = urlParams.get('refer');
+      const referAddress = referAddressParam ? decodeURIComponent(referAddressParam) : null; // 进行更严格的检查
+      if (referAddress && !isInviterBound) {
+        if (!inviter || inviter === '0x0000000000000000000000000000000000000000') {
            setInviterInput(referAddress); 
            setIsModalOpen(true);
-         }
+        
+          }
+       }else{
+        console.log('referAddress', 'referAddress');
        }
     }
   };
@@ -121,13 +130,23 @@ const SubscriptionPage = () => {
         throw new Error("Provider is not available");
       }
 
+      // 解密 referAddress
+      const decryptedBytes = CryptoJS.AES.decrypt(inviterInput, SALT);
+      const decryptedAddress = decryptedBytes.toString(CryptoJS.enc.Utf8); // 获取解密后的地址
+      // 检查 decryptedAddress 是否为有效的以太坊地址
+      if (!ethers.isAddress(decryptedAddress)) {
+        alert(t('subscription.invalidInviteCode')); // 提示错误信息
+        return; // 退出函数
+      }
+      console.log('decryptedAddress', decryptedAddress);
+
       const contract = new ethers.Contract(
         '0x636B03c4f2885E341E9bEE0512Fc0061cC5BAb5b',
         ['function bindInvitation(address _inviter) external'],
         signer // 使用 signer 而不是 provider
       );
 
-      const tx = await contract.bindInvitation(inviterInput); // 调用合约方法
+      const tx = await contract.bindInvitation(decryptedAddress); // 调用合约方法
       await tx.wait(); // 等待交易确认
 
       setIsInviterBound(true); // 隐藏绑定邀请人按钮
@@ -225,9 +244,12 @@ const SubscriptionPage = () => {
               onClick={copyToClipboard} 
               className="text-blue-500 cursor-pointer whitespace-normal break-all"
             >
-              {inviteLink}
+              {newInviteLink}
             </span>
           </p>
+          <p className="text-orange-300 w-full mb-4 font-medium mb-1" onClick={() => window.open(`https://x.com/intent/tweet?text=${encodeURIComponent(t('subscription.shareMessage', { inviteLink: newInviteLink }))}`, '_blank')}>
+              {t('subscription.share')} 
+            </p>
 
           {/* Buttons */}
           <div className="flex space-x-4 mb-4">
@@ -248,6 +270,7 @@ const SubscriptionPage = () => {
           <p className="text-blue-500 w-full mb-4 font-medium mb-5" onClick={handleMoreDetailsClick}>
             {t('subscription.moreinfo')}
           </p>
+         
         </div>
 
         {/* Right content - My invite list */}
@@ -280,7 +303,7 @@ const SubscriptionPage = () => {
           <input 
             type="text" 
             value={inviterInput} 
-            onChange={(e) => setInviterInput(e.target.value)} 
+            onChange={(e) => setInviterInput(e.target.value)} // 这里会实时更新 inviterInput
             placeholder={t('subscription.placeholder')} 
             className="border p-2 w-full mb-4 text-white placeholder-white bg-transparent"
           />

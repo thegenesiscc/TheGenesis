@@ -279,6 +279,7 @@ export default {
     myInviteList: '招待リスト',
     listdefualt:'まだデータがありません ',
     moreinfo:'詳細情報 > ',
+    share:'Xに共有 > ',
     timeNotStart:'未開始',  
     timeStart:'開始認購 0.01BNB',
     inviter:'招待者：',
@@ -288,6 +289,8 @@ export default {
     placeholder:'招待コードを入力してください',
     BindInviterErr:'招待コードを確認するか、もう一度お試しください',
     insufficientBalance:'残高不足',
+    shareMessage: "🚀 私は @TheGenesis_cc で早期参加者のスポットを確保しました 🚀\n\n✅ 限定10%割引\n✅ 隠れた特典とマイニング報酬を持つ特別な早期参加者バッジ\n私はWeb3ゲームの次の大きなことに備えています！誰が私に参加しますか？ 🔥\n\n👉 今すぐあなたのスポットを確保してください：{{inviteLink}}\n",
+    invalidInviteCode:'招待コードが無効です。確認してからもう一度お試しください',
   },
   md: {
     activityBackgroundTitle: "活動背景",

@@ -278,6 +278,7 @@ export default {
     myInviteList: 'My Invitation List',
     listdefualt:'No data yet',
     moreinfo:'more info >',
+    share:'Share to X >',
     timeNotStart:'Presale not started',
     timeStart:'Start Presale 0.01BNB',
     inviter:'Inviter:',
@@ -287,6 +288,8 @@ export default {
     placeholder:'Enter invite code',
     BindInviterErr:'Failed to bind inviter, please check the invite code or try again',
     insufficientBalance:'Insufficient balance',
+    shareMessage: "🚀 I just secured my Early Bird spot in @TheGenesis_cc  🚀\n\n✅ Exclusive 10% discount\n✅ Special Early Bird Badge with hidden perks & Mining rewards\nI’m ready for the next big thing in Web3 gaming! Who’s joining me? 🔥\n\n👉 Grab your spot now: {{inviteLink}}\n#TheGenesis",
+    invalidInviteCode:'Invalid invite code, please check and try again',
   },
   md: {
     activityBackgroundTitle: "Activity Background",
