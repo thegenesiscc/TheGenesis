@@ -12,17 +12,15 @@ import { type Config, useConnectorClient } from 'wagmi'
 // import { type Config, useClient } from 'wagmi'
 import { clientToSigner } from '../utils/provider'; // 引入公共模块
 import CustomModal from '../components/CustomModal'; // 引入自定义弹窗组件
+import { useAnalytics } from '../hooks/useAnalytics';
 
-/** Action to convert a viem Client to an ethers.js Provider. */
-// export function useEthersProvider({ chainId }: { chainId?: number } = {}) {
-//   const client = useClient<Config>({ chainId })
-//   return useMemo(() => (client ? clientToProvider(client) : undefined), [client])
-// }
 /** Hook to convert a viem Wallet Client to an ethers.js Signer. */
 export function useEthersSigner({ chainId }: { chainId?: number } = {}) {
   const { data: client } = useConnectorClient<Config>({ chainId })
   return useMemo(() => (client ? clientToSigner(client) : undefined), [client])
 }
+
+const { sendEvent } = useAnalytics();
 
 const SALT = 'ethereum_address_salt'; // 固定盐值
 
@@ -50,14 +48,26 @@ const SubscriptionPage = () => {
     navigator.clipboard.writeText(newInviteLink).then(() => {
       alert(t('subscription.copySuccess'));
     });
+    sendEvent('button_click', {
+      button_name: 'copy_invite_link_button',
+      page_location: 'subscription_page'
+    });
   };
 
   const handleMoreDetailsClick = () => {
     navigate('/earlybirds'); //
+    sendEvent('button_click', {
+      button_name: 'earlybirds_button',
+      button_location: 'subscription_page'
+    });
   };
 
   const handleBindInviterClick = () => {
     setIsModalOpen(true); // 打开弹窗
+    sendEvent('button_click', {
+      button_name: 'bind_inviter_button',
+      page_location: 'subscription_page'
+    });
   };
 
   const handleModalClose = () => {
@@ -155,6 +165,10 @@ const SubscriptionPage = () => {
       fetchInviterAddress(); // 重新获取邀请人地址
       fetchInviterList(); // 重新获取邀请人列表
       setErrorMessage(''); // 清空错误消息
+      sendEvent('button_click', {
+        button_name: 'bind_inviter_button',
+        page_location: 'subscription_page'
+      });
     } catch (error) {
       console.error('Error binding inviter:', error);
       setErrorMessage(inviteErr); // 设置错误消息
@@ -197,10 +211,27 @@ const SubscriptionPage = () => {
 
       // 成功调用后，重新查询 earlyBirds 状态
       checkEarlyBirdStatus(); // 更新页面
+      sendEvent('button_click', {
+        button_name: 'register_button',
+        page_location: 'subscription_page'
+      });
     } catch (error) {
       console.error('Error registering as early bird:', error);
       setErrorMessage(t('subscription.registerError')); // 设置错误消息
     }
+  };
+
+  const handleShareClick = () => {
+    // 发送分享事件到 Google Analytics
+    sendEvent('share_click', {
+      share_platform: 'twitter',
+      share_location: 'subscription_page'
+    });
+    
+    window.open(
+      `https://x.com/intent/tweet?text=${encodeURIComponent(t('subscription.shareMessage', { inviteLink: newInviteLink }))}`,
+      '_blank'
+    );
   };
 
   if (!isConnected) {
@@ -247,9 +278,12 @@ const SubscriptionPage = () => {
               {newInviteLink}
             </span>
           </p>
-          <p className="text-orange-300 w-full mb-4 font-medium mb-1" onClick={() => window.open(`https://x.com/intent/tweet?text=${encodeURIComponent(t('subscription.shareMessage', { inviteLink: newInviteLink }))}`, '_blank')}>
-              {t('subscription.share')} 
-            </p>
+          <p 
+            className="text-orange-300 w-full mb-4 font-medium mb-1" 
+            onClick={handleShareClick}
+          >
+            {t('subscription.share')} 
+          </p>
 
           {/* Buttons */}
           <div className="flex space-x-4 mb-4">

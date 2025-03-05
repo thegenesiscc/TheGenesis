@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 
 import { FaTelegram, FaDiscord } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
+import { useAnalytics } from './hooks/useAnalytics';
+
+const { sendEvent } = useAnalytics();
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
@@ -19,10 +22,18 @@ const HomePage = () => {
 
   const handleStartNow = () => {
     navigate('/mywallet'); // 跳转到 GamePlayPage
+    sendEvent('button_click', {
+      button_name: 'start_now_button',
+      page_location: 'homepage'
+    });
   };
 
   const handleLearnMore = () => {
     navigate('/about'); // 跳转到 AboutPage
+    sendEvent('button_click', {
+      button_name: 'learn_more_button',
+      page_location: 'homepage'
+    });
   };
 
   return (

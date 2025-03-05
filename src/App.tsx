@@ -5,12 +5,22 @@ import { useTranslation } from 'react-i18next';
 import HomePage from './HomePage'; // 导入 HomePage 组件
 import AboutPage from './pages/TradePage';
 import GamePlayPage from './pages/GamePlayPage';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Routes, Route, BrowserRouter as Router, useLocation } from 'react-router-dom';
 import { Suspense ,useEffect,useState} from 'react';
 import MarkdownPage from './pages/MarkdownPage';
 import SubscriptionPage from './pages/SubscriptionPage';
+
+// 为了 TypeScript 支持，需要在文件顶部添加类型声明
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+}
+
 function App() {
   const [showTerms, setShowTerms] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const hasAcceptedTerms = localStorage.getItem('termsAccepted');
@@ -18,6 +28,15 @@ function App() {
       setShowTerms(true);
     }
   }, []);
+
+  useEffect(() => {
+    // Google Analytics 页面跟踪
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('config', 'G-8ESMT6VDBR', {
+        page_path: location.pathname + location.search
+      });
+    }
+  }, [location]);
 
   return (
 
