@@ -270,7 +270,7 @@ export default {
   },
   subscription: {
     title: 'Invite Friends',
-    description: 'Share your invite link to earn 10% rewards when the invited person purchases a mystery box.',
+    description: 'Share your invitation link to earn 10% rewards when the invited person purchases a mystery box.',
     inviteLinkPrefix: 'Click to copy the invitation link:',
     copySuccess: 'Invite link copied to clipboard!',
     presaleContent: 'Users who participate in the subscription will receive an exclusive early bird membership badge, marking their unique status in TheGenesis.',
