@@ -290,6 +290,9 @@ export default {
     insufficientBalance:'Insufficient balance',
     shareMessage: "🚀 I just secured my Early Bird spot in @TheGenesis_cc  🚀\n\n✅ Exclusive 10% discount\n✅ Special Early Bird Badge with hidden perks & Mining rewards\nI’m ready for the next big thing in Web3 gaming! Who’s joining me? 🔥\n\n👉 Grab your spot now: {{inviteLink}}\n#TheGenesis",
     invalidInviteCode:'Invalid invite code, please check and try again',
+    invitaddress:'Address',
+    invitearlybirdsbum:'EarlyBirds',
+    invitboxnum:'MysteryBox',
   },
   md: {
     activityBackgroundTitle: "Activity Background",

@@ -278,7 +278,7 @@ export default {
     walletAddress: '钱包地址：',
     myInviteList: '我的邀请列表',
     listdefualt:'暂无邀请人',
-    moreinfo:'更多详情 >',
+    moreinfo:'权益详情 >',
     share:'一键分享到 X >',
     timeNotStart:'认购未开始',
     timeStart:'开始认购 0.01BNB',
@@ -291,6 +291,9 @@ export default {
     insufficientBalance:'余额不足',
     shareMessage: '🚀 我刚刚在 @TheGenesis_cc 确保了我的早鸟名额 🚀\n\n✅ 独家 10% 折扣\n✅ 特别早鸟徽章，附带隐藏特权和挖矿奖励\n我准备好迎接 Web3 游戏的下一个重大事件了！谁来和我一起？ 🔥\n\n👉 立即抢占你的名额：{{inviteLink}}\n#TheGenesis',
     invalidInviteCode:'无效的邀请码，请检查后重试',
+    invitaddress:'地址',
+    invitearlybirdsbum:'早鸟数',
+    invitboxnum:'盲盒数',
   },
   md: {
     activityBackgroundTitle: "活动背景",

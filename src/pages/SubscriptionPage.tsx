@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { ethers } from 'ethers'; // 引入 ethers
 import { BigNumber } from 'ethers'; // 添加 BigNumber 导入
 import CryptoJS from 'crypto-js'; // 引入 crypto-js
+import { useEarlyBirdContract } from '../hooks/useEarlyBirdContract';
 
 import { useMemo } from 'react'
 import { type Config, useConnectorClient } from 'wagmi'
@@ -24,6 +25,11 @@ const { sendEvent } = useAnalytics();
 
 const SALT = 'ethereum_address_salt'; // 固定盐值
 
+const formatAddress = (address: string) => {
+  if (address.length <= 8) return address;
+  return `${address.slice(0, 4)}...${address.slice(-4)}`;
+};
+
 const SubscriptionPage = () => {
   const { t } = useTranslation();
   const { isConnected, address } = useAccount();
@@ -36,6 +42,10 @@ const SubscriptionPage = () => {
   const [errorMessage, setErrorMessage] = useState(''); // 新增状态管理
   const [inviterList, setInviterList] = useState<string[]>([]); // 新增状态管理
   const [isEarlyBird, setIsEarlyBird] = useState<boolean>(false); // 新增状态管理
+
+  const [registrationStatus, setRegistrationStatus] = useState<Record<string, boolean>>({});
+  const { checkRegistrationStatus } = useEarlyBirdContract(signer);
+
 
   const inviteLinkPrefix = t('subscription.inviteLinkPrefix');
   const inviteErr = t('subscription.BindInviterErr');
@@ -112,19 +122,23 @@ const SubscriptionPage = () => {
 
       const inviteInfo = await contract.getInviteInfo(address); 
       setInviterList(inviteInfo);
+      checkAllAddresses();
     }
   };
 
   const checkEarlyBirdStatus = async () => {
     if (isConnected && address && signer) {
-      const contract = new ethers.Contract(
-        '0x7374b6bb72d09a7bf3d9cac249552d5005a5f0c1',
-        ['function isRegistered(address _address) external view returns (bool)'],
-        signer
-      );
-
-      const registered = await contract.isRegistered(address);
-      setIsEarlyBird(registered); // 更新状态
+      const registered = await checkRegistrationStatus(address);
+      setIsEarlyBird(registered);
+    }
+  };
+  const checkAllAddresses = async () => {
+    for (const inviter of inviterList) {
+      const status = await checkRegistrationStatus(inviter);
+      setRegistrationStatus(prev => ({
+        ...prev,
+        [inviter]: status
+      }));
     }
   };
 
@@ -132,6 +146,9 @@ const SubscriptionPage = () => {
     fetchInviterAddress();
     fetchInviterList(); // 新增调用
     checkEarlyBirdStatus(); // 新增调用
+    // if (signer) {
+    //   checkAllAddresses();
+    // }
   }, [isConnected, address, signer]);
 
   const handleConfirm = async () => {
@@ -301,7 +318,7 @@ const SubscriptionPage = () => {
           <p className="font-medium mb-5">
             {t('subscription.presaleContent')}
           </p>
-          <p className="text-blue-500 w-full mb-4 font-medium mb-5" onClick={handleMoreDetailsClick}>
+          <p className="text-orange-300 w-full mb-4 font-medium mb-5" onClick={handleMoreDetailsClick}>
             {t('subscription.moreinfo')}
           </p>
          
@@ -323,11 +340,24 @@ const SubscriptionPage = () => {
             <p className=" mb-4">{t('subscription.listdefualt')}</p>
           )}
           {inviterList.length > 0 && (
-            <ul>
-              {inviterList.map((inviter, index) => (
-                <li key={index}>{inviter}</li> 
-              ))}
-            </ul>
+            <div className="overflow-x-auto">
+              <table className="min-w-full table-auto">
+                <thead>
+                  <tr className="border-b border-orange-200">
+                    <th className="px-4 py-2 text-left text-orange-300">{t('subscription.invitaddress')}</th>
+                    <th className="px-4 py-2 text-left text-orange-300">{t('subscription.invitearlybirdsbum')}</th>
+                    <th className="px-4 py-2 text-left text-orange-300">{t('subscription.invitboxnum')}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {inviterList.map((inviter, index) => (<tr key={index} className="border-b border-orange-200">
+                    <td className="px-4 py-2">{formatAddress(inviter)}</td>
+                    <td className="px-4 py-2">{registrationStatus[inviter] ? '1' : '0'}</td>
+                    <td className="px-4 py-2">0</td>
+                  </tr>))}
+                </tbody>
+              </table>
+            </div>
           )}
         </div>
       </div>

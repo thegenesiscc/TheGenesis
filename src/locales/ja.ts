@@ -291,6 +291,9 @@ export default {
     insufficientBalance:'残高不足',
     shareMessage: "🚀 私は @TheGenesis_cc で早期参加者のスポットを確保しました 🚀\n\n✅ 限定10%割引\n✅ 隠れた特典とマイニング報酬を持つ特別な早期参加者バッジ\n私はWeb3ゲームの次の大きなことに備えています！誰が私に参加しますか？ 🔥\n\n👉 今すぐあなたのスポットを確保してください：{{inviteLink}}\n",
     invalidInviteCode:'招待コードが無効です。確認してからもう一度お試しください',
+    invitaddress:'アドレス',
+    invitearlybirdsbum:'早鳥数',
+    invitboxnum:'盲盒数',
   },
   md: {
     activityBackgroundTitle: "活動背景",
