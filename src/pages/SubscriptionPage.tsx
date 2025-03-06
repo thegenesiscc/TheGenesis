@@ -114,15 +114,29 @@ const SubscriptionPage = () => {
 
   const fetchInviterList = async () => {
     if (isConnected && address && signer) {
-      const contract = new ethers.Contract(
-        '0x636B03c4f2885E341E9bEE0512Fc0061cC5BAb5b',
-        ['function getInviteInfo(address _invitee) external view returns (address[] memory)'],
-        signer
-      );
+      try {
+        const contract = new ethers.Contract(
+          '0x636B03c4f2885E341E9bEE0512Fc0061cC5BAb5b',
+          ['function getInviteInfo(address _invitee) external view returns (address[] memory)'],
+          signer
+        );
 
-      const inviteInfo = await contract.getInviteInfo(address); 
-      setInviterList(inviteInfo);
-      checkAllAddresses();
+        const inviteInfo = await contract.getInviteInfo(address);
+        await checkAllAddresses(inviteInfo); 
+        setInviterList(inviteInfo); 
+      } catch (error) {
+        console.error('Error fetching inviter list:', error);
+      }
+    }
+  };
+
+  const checkAllAddresses = async (addresses: string[]) => {
+    for (const inviter of addresses) {
+      const status = await checkRegistrationStatus(inviter);
+      setRegistrationStatus(prev => ({
+        ...prev,
+        [inviter]: status
+      }));
     }
   };
 
@@ -132,15 +146,7 @@ const SubscriptionPage = () => {
       setIsEarlyBird(registered);
     }
   };
-  const checkAllAddresses = async () => {
-    for (const inviter of inviterList) {
-      const status = await checkRegistrationStatus(inviter);
-      setRegistrationStatus(prev => ({
-        ...prev,
-        [inviter]: status
-      }));
-    }
-  };
+ 
 
   useEffect(() => {
     fetchInviterAddress();
