@@ -51,7 +51,6 @@ const TradePage = () => {
         <ul className="list-disc list-inside mb-4">
           <li>{t('gameplay.chapter5.description')}</li>
           <li>{t('gameplay.chapter5.description1')}</li>
-          <li>{t('gameplay.chapter5.description2')}</li>
         </ul>
         </FadeInWhenVisible>
         <h2 className="text-xl font-bold mb-4">{t('gameplay.chapter6.title')}</h2>
