@@ -152,9 +152,6 @@ const SubscriptionPage = () => {
     fetchInviterAddress();
     fetchInviterList(); // 新增调用
     checkEarlyBirdStatus(); // 新增调用
-    // if (signer) {
-    //   checkAllAddresses();
-    // }
   }, [isConnected, address, signer]);
 
   const handleConfirm = async () => {
@@ -209,7 +206,6 @@ const SubscriptionPage = () => {
       const provider = signer.provider;
       
       // 检查用户的余额
-      // const balance = await signer.getProvider().getBalance(); // 直接调用 getBalance
       const balance = await provider.getBalance(userAddress);
       console.log('balance', balance);
       const requiredAmount = ethers.parseEther("0.01"); // 需要的金额 0.01 BNB
@@ -220,12 +216,11 @@ const SubscriptionPage = () => {
       }
 
       const contract = new ethers.Contract(
-        '0x7374b6bb72d09a7bf3d9cac249552d5005a5f0c1',
+        '0xf5051e73f0de71f0d56ab15b13e3f4feda33b146',
         ['function register() external payable'],
         signer
       );
 
-      console.log(contract);
 
       const tx = await contract.register({
         value: requiredAmount // 支付 0.01 BNB
